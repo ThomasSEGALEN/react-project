@@ -1,0 +1,167 @@
+:root {
+    --gutter: 20px;
+    --contentMargin: calc(var(--gutter) * 0.5);
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-weight: normal;
+    font-size: inherit;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+html {
+    line-height: 1.3;
+}
+
+body {
+    font-family: Segoe UI, Helvetica, Arial, sans-serif;
+    background: #fff;
+    color: #222;
+    margin: 0;
+    padding: 0;
+}
+
+.App {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.App-header,
+.App-footer {
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.App-content {
+    flex-grow: 1;
+    overflow: auto;
+}
+
+.Header {
+    padding: calc(var(--gutter) / 2) var(--gutter) 0;
+    color: #fff;
+    background: #B71C1C;
+    border-bottom: 1px solid #f35050;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.Header-titleWrapper,
+.Header-nav {
+    padding-bottom: calc(var(--gutter) / 2);
+}
+
+.Header-title {
+    font-size: 130%;
+    margin-right: 20px;
+}
+
+.Header-nav ul {
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 700px) {
+    .Header {
+        display: flex;
+        align-items: baseline;
+    }
+
+    .Header-nav ul {
+        flex-direction: row;
+    }
+
+    .Header-nav li:not(:last-child) {
+        margin-right: 15px;
+    }
+}
+
+.Gutter {
+    padding: var(--gutter);
+}
+
+.Footer {
+    border-top: 1px solid #ccc;
+    background: #f1f1f1;
+}
+
+.Title {
+    font-size: 120%;
+    margin: calc(var(--contentMargin) * 2) 0 var(--contentMargin);
+}
+
+.Title:first-child {
+    margin-top: 0;
+}
+
+.NewTaskForm {
+    display: flex;
+    flex-direction: row;
+}
+
+.TextInput label,
+input,
+button {
+    margin-right: 5px;
+}
+
+.TaskList {
+    display: flex;
+    flex-direction: column;
+}
+
+.TaskItem {
+    display: flex;
+    flex-direction: row;
+}
+
+.TaskItem-checkbox,
+.TaskItem-title {
+    margin-right: 5px;
+}
+
+.TaskItem--done .TaskItem-title {
+    text-decoration: line-through;
+}
+
+.Text:not(:last-child) {
+    margin-bottom: var(--contentMargin);
+}
+
+.Hidden {
+    display: none !important;
+}
+
+.ScreenReaderOnly {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}

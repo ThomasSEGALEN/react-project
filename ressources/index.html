@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta name="charset" value="utf-8">
+		<title>Liste de tâches : exercice 5 template JS</title>
+		<meta name="viewport" content="width=device-width">
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<div class="App">
+			<div class="App-header Header">
+				<header class="Header-titleWrapper" role="banner">
+					<h1 class="Header-title">Application de liste de tâches</h1>
+				</header>
+
+				<nav class="Header-nav" role="navigation">
+					<ul>
+						<li>
+							<a href="#new-task">Ajouter une tâche</a>
+						</li>
+						<li>
+							<a href="#list">Liste des tâches</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+
+			<main role="main" class="App-content Gutter">
+
+				<h2 class="Title" id="new-task">Ajouter une tâche</h2>
+				<form action="#" class="NewTaskForm">
+					<label for="new-task-name">Tâche</label>
+					<input type="text" name="new-task-name" id="new-task-name">
+					<button>Ajouter</button>
+				</form>
+
+				<h2 class="Title" id="list">Liste des tâches</h2>
+				<ul class="TaskList">
+				</ul>
+			</main>
+
+			<footer class="App-footer Footer Gutter" role="contentinfo">
+				<p class="Text">Application réalisée pour la formation B2 dev Campus Academy</p>
+			</footer>
+		</div>
+		<script src="script.js"></script>
+	</body>
+</html>
