@@ -3,7 +3,7 @@ function PersonsList({ personsListClass, persons, filteredByName, inputValue, pe
         <ul className={personsListClass}>
             {persons.length ? persons.filter(({ name }) => filteredByName(name, inputValue)).map((filteredPersons, index) => (
                 <li className={personsItemClass}  key={`PersonsItem-${index + 1}`}>
-                    <img className={personsImageClass} id={`PersonsImage-${index + 1}`} key={`PersonsImage-${index + 1}`} src={filteredPersons.image} alt={filteredPersons.name} />
+                    <img className={personsImageClass} id={`PersonsImage-${index + 1}`} key={`PersonsImage-${index + 1}`} src={filteredPersons.image} alt={filteredPersons.name}/>
                     <div className="PersonsInformations">
                         <h2 className="PersonsTitle">{filteredPersons.name}</h2>
                             <p className="PersonsDescription">

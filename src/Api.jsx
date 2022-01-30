@@ -8,10 +8,9 @@ export default function Api() {
     const [persons, setPersons] = useState([])
     const [inputValue, setInput] = useState('')
     const [buttonValue, setButtonValue] = useState(false)
-    // const [imageValue, setImageValue] = useState(false)
     const personsListClass = buttonValue ? "PersonsList" : "PersonsList--icon"
-    const personsItemClass = buttonValue ? "PersonsItem PersonsItem--icon" : "PersonsItem"
-    // const personsImageClass = imageValue ? "PersonsImage" :  "PersonsImage"
+    const personsItemClass = buttonValue ? "PersonsItem" : "PersonsItem PersonsItem--icon"
+    const personsImageClass = buttonValue ? "PersonsImage" :  "PersonsImage PersonsImage--icon"
 
     useEffect(() => {
         fetch('https://rickandmortyapi.com/api/character/1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20').then((response) => {
@@ -47,10 +46,10 @@ export default function Api() {
         <div className="App">
             <Header onChange={onChange} IconButton={IconButton} ListButton={ListButton}>Rick and Morty API</Header>
             <div className="App-main Main">
-                <PersonsList personsListClass={personsListClass} persons={persons} filteredByName={filteredByName} inputValue={inputValue} personsItemClass={personsItemClass} personsImageClass="PersonsImage"></PersonsList>
+                <PersonsList personsListClass={personsListClass} persons={persons} filteredByName={filteredByName} inputValue={inputValue} personsItemClass={personsItemClass} personsImageClass={personsImageClass}></PersonsList>
             </div>
             <div className="App-footer">
-                <Footer>Application réalisée par Thomas SÉGALEN</Footer>
+                <Footer>Application développée par Thomas SÉGALEN</Footer>
             </div>
         </div>
     )
