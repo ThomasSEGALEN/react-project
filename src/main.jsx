@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-// import Api from './Api'
+// import App from './App'
 import Api from './Api'
 
 ReactDOM.render(

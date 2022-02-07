@@ -6,11 +6,11 @@ import { useState, useEffect } from 'react'
 
 export default function Api() {
     const [persons, setPersons] = useState([])
-    const [inputValue, setInput] = useState('')
+    const [inputValue, setInputValue] = useState('')
     const [buttonValue, setButtonValue] = useState(false)
     const personsListClass = buttonValue ? "PersonsList" : "PersonsList--icon"
     const personsItemClass = buttonValue ? "PersonsItem" : "PersonsItem PersonsItem--icon"
-    const personsImageClass = buttonValue ? "PersonsImage" :  "PersonsImage PersonsImage--icon"
+    const personsImageClass = buttonValue ? "PersonsImage" : "PersonsImage PersonsImage--icon"
 
     useEffect(() => {
         fetch('https://rickandmortyapi.com/api/character/1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20').then((response) => {
@@ -29,7 +29,7 @@ export default function Api() {
     }
 
     const onChange = (event) => {
-        setInput(event.target.value)
+        setInputValue(event.target.value)
     }
 
     // const filteredByName = (name, inputValue) => {
